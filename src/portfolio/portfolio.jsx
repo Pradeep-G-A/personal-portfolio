@@ -33,9 +33,28 @@ const sections = [
 
 function App() {
   const [activeSection, setActiveSection] = useState("about");
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const mainContentRef = useRef(null);
+    const portfolioContainerRef = useRef(null);
 
+  // Handle initial page load - scroll portfolio container to top
   useEffect(() => {
+    if (isInitialLoad) {
+      // Scroll the portfolio container to top (0) on page reload/load
+      if (portfolioContainerRef.current) {
+        portfolioContainerRef.current.scrollTop = 0;
+      }
+      // Also scroll window to top as fallback
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
+      setIsInitialLoad(false);
+    }
+      }, [isInitialLoad]);   
+
+   
+  useEffect(() => {
+        if (!isInitialLoad) {
+
     const isMobile = window.innerWidth <= 992;
 
     if (isMobile) {
@@ -48,11 +67,13 @@ function App() {
         mainContentRef.current.scrollTop = ({ top: 0, behavior: 'smooth' });
       }
     }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSection]);
 
   return (
     <>
-      <div className="portfolio-container">
+      <div className="portfolio-container" ref={portfolioContainerRef}>
         <aside className="sidebar">
           <ProfileSection />
         </aside>
