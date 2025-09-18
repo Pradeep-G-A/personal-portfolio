@@ -204,13 +204,13 @@ body {
 .content-display {
   background-color: rgba(112, 111, 111, 0.3);
   border-radius: 10px;
-  max-height: 550px;
+  max-height: 420px;
   padding: 25px;
   flex-grow: 1;
   animation: fadeIn 0.5s ease;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: #000000 #ffffff;
+  scrollbar-color: #000000 #faf2e6;
 }
 
 .content-display::-webkit-scrollbar {
@@ -678,9 +678,9 @@ body {
 
   .content-display {
     overflow-y: scroll;
-    max-height: 535px;
+    max-height: 600px;
     scrollbar-width: thin;
-    scrollbar-color: #000000 #ffffff;
+    scrollbar-color: #000000 #faf2e6;
   }
 
   .sidebar {

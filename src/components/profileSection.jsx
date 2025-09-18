@@ -15,7 +15,7 @@ export const ProfileSection = () => {
         </div>
         {/* <h1 className="profile-name">Pradeep G A</h1> */}
         <h1 aria-label="Hi! I'm Pradeep" className="profile-name">
-          Hi! I'm&nbsp;<span class="typewriter"></span>
+          Hi! I'm&nbsp;<span className="typewriter"></span>
         </h1>
         <div className="profile-role">Full Stack Developer</div>
         <div className="profile-details">
