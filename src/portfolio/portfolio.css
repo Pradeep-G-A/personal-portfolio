@@ -165,11 +165,8 @@ body {
   position: relative;
 }
 
-/* --- Button Styles (Updated) --- */
 .top-nav button {
-  /* This is CRUCIAL for the animation to work */
   position: relative;
-
   color: #faf2e6;
   text-decoration: none;
   font-size: 1rem;
@@ -178,8 +175,6 @@ body {
   background: none;
   border: none;
   font-family: monospace;
-
-  /* Transition for text color changes */
   transition: color 0.3s;
   z-index: 10;
 }
@@ -188,38 +183,28 @@ body {
   background-color: #555;
   border-radius: 10px;
 }
-
-/* A subtle hover effect for non-active buttons */
 .top-nav button:not(.active):hover {
   color: #ffffff;
 }
 
-/* This rule now ONLY changes the text color */
 .top-nav button.active {
   color: #000000;
-
   border-radius: 10px;
-
 }
 
-
-/* --- NEW: Style for the Animated Bubble --- */
 .active-nav-bubble {
   position: absolute;
   inset: 0;
   background-color: #faf2e6;
-  /* This was your old active background color */
   border-radius: 8px;
-  /* Match the button's border-radius */
   z-index: -1;
-  /* Place the bubble BEHIND the text */
 }
 
 /* --- Content Display Area --- */
 .content-display {
   background-color: rgba(112, 111, 111, 0.3);
   border-radius: 10px;
-  max-height: 400px;
+  max-height: 450px;
   padding: 25px;
   flex-grow: 1;
   animation: fadeIn 0.5s ease;
@@ -318,7 +303,6 @@ body {
 .timeline {
   position: relative;
   padding-left: 40px;
-  /* Increased padding for precise alignment */
   border-left: 2px solid #555;
 }
 
@@ -331,7 +315,6 @@ body {
   align-items: center;
   gap: 15px;
   margin-left: -56px;
-  /* Calculated to center the icon: 40px padding + 15px (half icon width) + 1px (half border width) */
   margin-bottom: 20px;
 }
 
@@ -345,7 +328,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  /* Prevents icon from shrinking */
 }
 
 .timeline-section {
@@ -357,7 +339,6 @@ body {
   align-items: center;
   gap: 15px;
   margin-left: -56px;
-  /* Pull icon and header back over the line */
   margin-bottom: 20px;
 }
 
@@ -439,56 +420,63 @@ body {
 }
 
 
-    /* --- NEW CERTIFICATE STYLES --- */
-    .certificate-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .certificate-card {
-      position: relative;
-      height: 150px;
-      border-radius: 8px;
-      overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      border: 1px solid #444;
-      transition: transform 0.3s ease;
-    }
-    .certificate-card:hover {
-      transform: scale(1.1);
-      z-index: 10;
-    }
-    .certificate-content {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-      transition: opacity 0.3s ease;
-    }
-    .certificate-card:hover .certificate-content {
-      opacity: 0;
-    }
-    .certificate-icon {
-      font-size: 2.5rem !important;
-      margin-bottom: 10px;
-      color: #ededed;
-    }
-    .certificate-title {
-      font-size: 1rem;
-      font-weight: bold;
-      margin: 0 0 5px 0;
-    }
-    .certificate-issuer {
-      font-size: 0.85rem;
-      color: #ccc;
-      margin: 0;
-    }
+/* --- NEW CERTIFICATE STYLES --- */
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.certificate-card {
+  position: relative;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #444;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.certificate-content {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover .certificate-content {
+  opacity: 0;
+}
+
+.certificate-icon {
+  font-size: 2.5rem !important;
+  margin-bottom: 10px;
+  color: #ededed;
+}
+
+.certificate-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.certificate-issuer {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin: 0;
+}
 
 /* --- Projects Grid --- */
 .projects-grid {
@@ -569,8 +557,6 @@ body {
   background-color: #444;
 }
 
-
-
 /* --- ENHANCED CONTACT SECTION STYLES --- */
 .contact-container {
   display: flex;
@@ -639,7 +625,6 @@ body {
   color: #faf2e6;
   font-family: monospace;
   box-sizing: border-box;
-  /* Important for consistent sizing */
 }
 
 .contact-form input:focus,
@@ -689,7 +674,6 @@ body {
     z-index: 100;
     background-color: rgba(34, 34, 34, 1);
     transition: all 0.5s ease-in-out;
-
   }
 
   .content-display {
@@ -697,7 +681,6 @@ body {
     max-height: 535px;
     scrollbar-width: thin;
     scrollbar-color: #000000 #ffffff;
-    /* Disable scrolling inside the container */
   }
 
   .sidebar {
@@ -716,7 +699,6 @@ body {
   .profile-wrapper {
     max-width: 500px;
     margin: 0 auto;
-    /* Center profile on smaller tablet view */
   }
 
   .contact-container {
@@ -769,13 +751,11 @@ body {
   --caret: currentcolor;
 }
 
-/* The content that gets typed */
 .typewriter::before {
   content: "";
   animation: typing 13.5s infinite;
 }
 
-/* The blinking caret */
 .typewriter::after {
   content: "";
   border-right: 1px solid var(--caret);
@@ -791,170 +771,47 @@ body {
 }
 
 @keyframes blink {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
+  0%,100% {opacity: 1;}
+  50% {opacity: 0;}
 }
 
 /* Updated Typing Animation Keyframes */
 @keyframes typing {
+  0%,26% {content: "";}
+  32%,63% {content: "";}
+  69%,99% {content: "";}
+  100% {content: "";}
 
-  /* Set empty states for periods between words */
-  0%,
-  26% {
-    content: "";
-  }
+  /* Word 1: Pradeep */
+  1%,25% {content: "P";}
+  2%,24% {content: "Pr";}
+  3%,23% {content: "Pra";}
+  4%,22% {content: "Prad";}
+  5%,21% {content: "Prade";}
+  6%,20% {content: "Pradee";}
+  7%,19% {content: "Pradeep";}
 
-  32%,
-  63% {
-    content: "";
-  }
+  /* Word 2: a Developer*/
+  33%,62% {content: "a";}
+  34%,61% {content: "a ";}
+  35%,60% {content: "a D";}
+  36%,59% {content: "a De";}
+  37%,58% {content: "a Dev";}
+  38%,57% {content: "a Deve";}
+  39%,56% {content: "a Devel";}
+  40%,55% {content: "a Develo";}
+  41%,54% {content: "a Develop";}
+  42%,53% {content: "a Develope";}
+  43%,52% {content: "a Developer";}
 
-  69%,
-  99% {
-    content: "";
-  }
-
-  100% {
-    content: "";
-  }
-
-  /* Word 1: Pradeep (7 letters) */
-  1%,
-  25% {
-    content: "P";
-  }
-
-  2%,
-  24% {
-    content: "Pr";
-  }
-
-  3%,
-  23% {
-    content: "Pra";
-  }
-
-  4%,
-  22% {
-    content: "Prad";
-  }
-
-  5%,
-  21% {
-    content: "Prade";
-  }
-
-  6%,
-  20% {
-    content: "Pradee";
-  }
-
-  /* Pause on full word */
-  7%,
-  19% {
-    content: "Pradeep";
-  }
-
-  /* Word 2: a Developer (11 letters) */
-  33%,
-  62% {
-    content: "a";
-  }
-
-  34%,
-  61% {
-    content: "a ";
-  }
-
-  35%,
-  60% {
-    content: "a D";
-  }
-
-  36%,
-  59% {
-    content: "a De";
-  }
-
-  37%,
-  58% {
-    content: "a Dev";
-  }
-
-  38%,
-  57% {
-    content: "a Deve";
-  }
-
-  39%,
-  56% {
-    content: "a Devel";
-  }
-
-  40%,
-  55% {
-    content: "a Develo";
-  }
-
-  41%,
-  54% {
-    content: "a Develop";
-  }
-
-  42%,
-  53% {
-    content: "a Develope";
-  }
-
-  /* Pause on full word */
-  43%,
-  52% {
-    content: "a Developer";
-  }
-
-  /* Word 3: a Human (7 letters) */
-  70%,
-  98% {
-    content: "a";
-  }
-
-  71%,
-  97% {
-    content: "a ";
-  }
-
-  72%,
-  96% {
-    content: "a H";
-  }
-
-  73%,
-  95% {
-    content: "a Hu";
-  }
-
-  74%,
-  94% {
-    content: "a Hum";
-  }
-
-  75%,
-  93% {
-    content: "a Huma";
-  }
-
-  /* Pause on full word */
-  76%,
-  92% {
-    content: "a Human";
-  }
+  /* Word 3: a Human */
+  70%,98% {content: "a";}
+  71%,97% {content: "a ";}
+  72%,96% {content: "a H";}
+  73%,95% {content: "a Hu";}
+  74%,94% {content: "a Hum";}
+  75%,93% {content: "a Huma";}
+  76%,92% {content: "a Human";}
 }
 
 /* Animation for users who prefer reduced motion */
@@ -964,19 +821,10 @@ body {
   }
 
   @keyframes sequencePopup {
-
     0%,
-    100% {
-      content: "Pradeep";
-    }
-
-    33% {
-      content: "a Developer";
-    }
-
-    66% {
-      content: "a Human";
-    }
+    100% {content: "Pradeep";}
+    33% {content: "a Developer";}
+    66% {content: "a Human";}
   }
 
   .typewriter::before {
