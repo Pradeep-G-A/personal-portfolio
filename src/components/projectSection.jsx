@@ -31,7 +31,7 @@ const projectData = [
     "Developed a comprehensive affiliate marketing hub featuring real-time analytics, link tracking, and commission management to maximize user earnings.",
     skills: ["React", "NextJS", "CSS", "JavaScript"], 
     liveUrl: "https://everydayessentialshub.netlify.app/",
-    githubUrl: "https://github.com/Pradeep-G-A/Affliate-Marketing-Website",
+    githubUrl: null,
   },
   {
     title: "Database Management System",
@@ -113,6 +113,7 @@ export const ProjectSection = () => {
                       <LaunchIcon fontSize="small" /> Live Demo
                     </a>
                   )}
+                  {project.githubUrl && (                  
                   <a
                     href={project.githubUrl}
                     target="_blank"
@@ -121,6 +122,7 @@ export const ProjectSection = () => {
                   >
                     <GitHubIcon fontSize="small" /> GitHub
                   </a>
+                  )}
                 </div>
               </div>
             </div>
