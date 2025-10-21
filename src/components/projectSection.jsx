@@ -30,7 +30,7 @@ const projectData = [
     description:
     "Developed a comprehensive affiliate marketing hub featuring real-time analytics, link tracking, and commission management to maximize user earnings.",
     skills: ["React", "NextJS", "CSS", "JavaScript"], 
-    liveUrl: "https://everydayessentialshub.netlify.app/",
+    liveUrl: "https://everyday-essentials-hub.netlify.app/",
     githubUrl: null,
   },
   {

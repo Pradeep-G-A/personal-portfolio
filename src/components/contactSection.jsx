@@ -56,7 +56,12 @@ export const ContactSection = () => {
                         </div>
                         <div className="contact-detail-item">
                             <EmailIcon />
-                            <span>gapradeep123@gmail.com</span>
+                            <a 
+                            href="mailto:gapradeep123@gmail.com"
+                            className="profile-info link"
+                            >
+                            gapradeep123@gmail.com
+                            </a>                        
                         </div>
                         <div className="contact-detail-item">
                             <LocationOnIcon />
@@ -65,8 +70,8 @@ export const ContactSection = () => {
                     </div>
                     <div className="social-links">
                         <Link href="https://github.com/pradeepga" target="_blank" rel="noopener noreferrer"><GitHubIcon /></Link>
-                        <Link href="#" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></Link>
-                        <Link href="#" target="_blank" rel="noopener noreferrer"><XIcon /></Link>
+                        <Link href="https://www.linkedin.com/in/pradeep-ga1104/" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></Link>
+                        <Link href="https://x.com/Pradeep_g_a7" target="_blank" rel="noopener noreferrer"><XIcon /></Link>
                     </div>
                 </div>
                 <form className="contact-form" onSubmit={handleFormSubmit}>
